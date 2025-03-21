@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50 py-16">
       <div className="container px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div className="col-span-1 md:col-span-2">
+        <div className="max-w-6xl mx-auto">
+          <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
                 <span className="text-white font-bold text-sm">T</span>
@@ -20,68 +20,6 @@ const Footer = () => {
             <p className="text-sm text-gray-500">
               © {new Date().getFullYear()} Tranquil. All rights reserved.
             </p>
-          </div>
-          
-          <div>
-            <h3 className="font-medium text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/#about" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/#resources" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Resources
-                </Link>
-              </li>
-              <li>
-                <Link to="/#contact" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link to="/login" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Login
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-medium text-lg mb-4">Resources</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Self-Help Tools
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Crisis Support
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Find a Therapist
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Blog & Articles
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Community Forums
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
         
@@ -109,3 +47,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
