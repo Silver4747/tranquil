@@ -48,24 +48,6 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-        
-        {/* Statistics with simpler styling */}
-        <div className="mt-10 sm:mt-20">
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 p-6 sm:p-8 bg-white/70 rounded-xl border border-gray-200 shadow-md">
-            <div className="text-center py-6">
-              <p className="text-3xl md:text-4xl font-bold text-blue-500">5,000+</p>
-              <p className="text-sm text-gray-500 mt-2">Community Members</p>
-            </div>
-            <div className="text-center py-6 border-t md:border-t-0 md:border-l md:border-r border-gray-200">
-              <p className="text-3xl md:text-4xl font-bold text-blue-500">200+</p>
-              <p className="text-sm text-gray-500 mt-2">Expert Resources</p>
-            </div>
-            <div className="text-center py-6 border-t md:border-t-0">
-              <p className="text-3xl md:text-4xl font-bold text-blue-500">96%</p>
-              <p className="text-sm text-gray-500 mt-2">User Satisfaction</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
