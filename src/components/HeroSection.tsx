@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { Play } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -38,6 +39,12 @@ const HeroSection = () => {
             </Link>
             <Button size="lg" variant="outline" className="rounded-full px-8">
               Learn More
+            </Button>
+            <Button 
+              size="lg" 
+              className="rounded-full px-8 bg-green-500 hover:bg-green-600 flex items-center"
+            >
+              <Play className="mr-2 h-4 w-4" /> Start Assessment
             </Button>
           </div>
         </div>
