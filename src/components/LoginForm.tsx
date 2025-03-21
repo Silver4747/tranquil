@@ -9,6 +9,7 @@ import BlurContainer from './BlurContainer';
 
 const LoginForm = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState("login");
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,10 +24,20 @@ const LoginForm = () => {
       });
     }, 1500);
   };
+
+  const switchToRegister = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setActiveTab("register");
+  };
+
+  const switchToLogin = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setActiveTab("login");
+  };
   
   return (
     <BlurContainer className="w-full max-w-md mx-auto p-6 md:p-8 animate-fade-up">
-      <Tabs defaultValue="login" className="w-full">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-2 mb-8">
           <TabsTrigger value="login">Log In</TabsTrigger>
           <TabsTrigger value="register">Sign Up</TabsTrigger>
@@ -79,10 +90,7 @@ const LoginForm = () => {
               <a 
                 href="#" 
                 className="text-tranquil-600 hover:text-tranquil-700 transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector('[data-value="register"]')?.click();
-                }}
+                onClick={switchToRegister}
               >
                 Sign up
               </a>
@@ -154,10 +162,7 @@ const LoginForm = () => {
               <a 
                 href="#" 
                 className="text-tranquil-600 hover:text-tranquil-700 transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector('[data-value="login"]')?.click();
-                }}
+                onClick={switchToLogin}
               >
                 Log in
               </a>

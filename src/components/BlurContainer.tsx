@@ -14,19 +14,21 @@ const BlurContainer = ({
   intensity = 'medium',
   ...props 
 }: BlurContainerProps) => {
+  // Simplified styling with basic CSS classes
   const intensityMap = {
-    light: 'backdrop-blur-sm bg-white/30 border-white/40',
-    medium: 'backdrop-blur-md bg-white/50 border-white/40',
-    heavy: 'backdrop-blur-lg bg-white/70 border-white/50',
+    light: 'bg-white/30 border-white/40',
+    medium: 'bg-white/50 border-white/40',
+    heavy: 'bg-white/70 border-white/50',
   };
 
   return (
     <div 
       className={cn(
-        'rounded-2xl border shadow-glass animate-fade-in', 
+        'rounded-2xl border shadow-md', 
         intensityMap[intensity],
         className
       )}
+      style={{backdropFilter: 'blur(10px)'}}
       {...props}
     >
       {children}
